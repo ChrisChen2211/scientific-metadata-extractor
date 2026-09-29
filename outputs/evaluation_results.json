@@ -1,0 +1,465 @@
+{
+  "dataset": "real scientific-paper excerpts",
+  "model": "gpt-5.6-luna",
+  "metric_policy": {
+    "exact": "Python value equality; strings must match character-for-character.",
+    "normalized": "Unicode NFKC, case folding, punctuation-to-space, whitespace collapse; no dataset-specific aliases or semantic judging.",
+    "error_categories": "Deterministic heuristics for analysis only; categories do not alter scores."
+  },
+  "overall": {
+    "total_fields": 35,
+    "exact_correct": 8,
+    "exact_accuracy": 0.22857142857142856,
+    "normalized_correct": 12,
+    "normalized_accuracy": 0.34285714285714286,
+    "samples_all_fields_exact": 0,
+    "samples_all_fields_normalized": 0,
+    "total_samples": 5
+  },
+  "per_field": {
+    "study_design": {
+      "exact_correct": 1,
+      "normalized_correct": 2,
+      "total": 5,
+      "exact_accuracy": 0.2,
+      "normalized_accuracy": 0.4
+    },
+    "population": {
+      "exact_correct": 0,
+      "normalized_correct": 1,
+      "total": 5,
+      "exact_accuracy": 0.0,
+      "normalized_accuracy": 0.2
+    },
+    "sample_size": {
+      "exact_correct": 5,
+      "normalized_correct": 5,
+      "total": 5,
+      "exact_accuracy": 1.0,
+      "normalized_accuracy": 1.0
+    },
+    "intervention_or_exposure": {
+      "exact_correct": 0,
+      "normalized_correct": 0,
+      "total": 5,
+      "exact_accuracy": 0.0,
+      "normalized_accuracy": 0.0
+    },
+    "biospecimen": {
+      "exact_correct": 0,
+      "normalized_correct": 1,
+      "total": 5,
+      "exact_accuracy": 0.0,
+      "normalized_accuracy": 0.2
+    },
+    "measurement_method": {
+      "exact_correct": 1,
+      "normalized_correct": 2,
+      "total": 5,
+      "exact_accuracy": 0.2,
+      "normalized_accuracy": 0.4
+    },
+    "duration_or_timepoints": {
+      "exact_correct": 1,
+      "normalized_correct": 1,
+      "total": 5,
+      "exact_accuracy": 0.2,
+      "normalized_accuracy": 0.2
+    }
+  },
+  "null_reference_behavior": {
+    "reference_null": 2,
+    "correct_null": 1,
+    "non_null_on_reference_null": 1,
+    "reference_supported": 33,
+    "non_null_on_reference_supported": 33,
+    "null_on_reference_supported": 0,
+    "correct_null_rate": 0.5,
+    "supported_reference_coverage": 1.0
+  },
+  "error_category_counts": {
+    "abbreviation/terminology difference": 12,
+    "missing information": 0,
+    "other content mismatch": 0,
+    "overly broad extraction": 0,
+    "overly specific extraction": 10,
+    "reference-null disagreement (manual review required)": 1,
+    "semantically equivalent but lexically different": 4
+  },
+  "samples": [
+    {
+      "id": "real_001",
+      "extraction_status": "success",
+      "all_fields_exact": false,
+      "all_fields_normalized": false,
+      "fields": [
+        {
+          "field": "study_design",
+          "expected": "randomized crossover study",
+          "predicted": "Randomized crossover study",
+          "exact_match": false,
+          "normalized_match": true,
+          "error_categories": [
+            "semantically equivalent but lexically different"
+          ]
+        },
+        {
+          "field": "population",
+          "expected": "healthy adults aged 18–35 with weekly running volume of 2–5 h and BMI < 30",
+          "predicted": "Healthy adults aged 18–35 years with a weekly running volume of 2–5 h and BMI <30",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "overly specific extraction"
+          ]
+        },
+        {
+          "field": "sample_size",
+          "expected": 23,
+          "predicted": 23,
+          "exact_match": true,
+          "normalized_match": true,
+          "error_categories": []
+        },
+        {
+          "field": "intervention_or_exposure",
+          "expected": "high-intensity interval exercise and moderate-intensity continuous exercise",
+          "predicted": "High-intensity interval exercise (HIIE) and moderate-intensity continuous exercise (MICE) sessions",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "overly specific extraction"
+          ]
+        },
+        {
+          "field": "biospecimen",
+          "expected": "peripheral blood mononuclear cells isolated from EDTA whole blood",
+          "predicted": "Whole blood collected in EDTA tubes; peripheral blood mononuclear cells (PBMCs)",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "abbreviation/terminology difference"
+          ]
+        },
+        {
+          "field": "measurement_method",
+          "expected": "LC-MS/MS-based untargeted proteomics",
+          "predicted": "LC-MS/MS-based untargeted proteomics",
+          "exact_match": true,
+          "normalized_match": true,
+          "error_categories": []
+        },
+        {
+          "field": "duration_or_timepoints",
+          "expected": "baseline, immediately after exercise, and 1 h after exercise; at least 72 h between visits",
+          "predicted": "Three visits (baseline testing, HIIE, MICE) with at least 72 h between visits; blood collected at baseline, immediately after exercise, and 1 h after exercise",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "overly specific extraction"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "real_002",
+      "extraction_status": "success",
+      "all_fields_exact": false,
+      "all_fields_normalized": false,
+      "fields": [
+        {
+          "field": "study_design",
+          "expected": null,
+          "predicted": "IMPOCT study; metformin-versus-placebo analysis in healthy participants",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "reference-null disagreement (manual review required)"
+          ]
+        },
+        {
+          "field": "population",
+          "expected": "healthy participants without diabetes",
+          "predicted": "Healthy participants without diabetes",
+          "exact_match": false,
+          "normalized_match": true,
+          "error_categories": [
+            "semantically equivalent but lexically different"
+          ]
+        },
+        {
+          "field": "sample_size",
+          "expected": 38,
+          "predicted": 38,
+          "exact_match": true,
+          "normalized_match": true,
+          "error_categories": []
+        },
+        {
+          "field": "intervention_or_exposure",
+          "expected": "metformin treatment",
+          "predicted": "Metformin or placebo; metformin was titrated to a maximum dose of 1000 mg twice daily, taken during the final week",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "abbreviation/terminology difference"
+          ]
+        },
+        {
+          "field": "biospecimen",
+          "expected": "blood",
+          "predicted": "Blood",
+          "exact_match": false,
+          "normalized_match": true,
+          "error_categories": [
+            "semantically equivalent but lexically different"
+          ]
+        },
+        {
+          "field": "measurement_method",
+          "expected": "Olink panels",
+          "predicted": "Protein levels measured using various Olink panels",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "overly specific extraction"
+          ]
+        },
+        {
+          "field": "duration_or_timepoints",
+          "expected": "baseline and after 4 weeks of metformin treatment",
+          "predicted": "Metformin treatment for 4 weeks; blood measurements at baseline and after 4 weeks",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "abbreviation/terminology difference"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "real_003",
+      "extraction_status": "success",
+      "all_fields_exact": false,
+      "all_fields_normalized": false,
+      "fields": [
+        {
+          "field": "study_design",
+          "expected": "acute exercise trial",
+          "predicted": "Acute exercise study with repeated microdialysis sampling",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "abbreviation/terminology difference"
+          ]
+        },
+        {
+          "field": "population",
+          "expected": "male participants",
+          "predicted": "Six male participants",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "overly specific extraction"
+          ]
+        },
+        {
+          "field": "sample_size",
+          "expected": 6,
+          "predicted": 6,
+          "exact_match": true,
+          "normalized_match": true,
+          "error_categories": []
+        },
+        {
+          "field": "intervention_or_exposure",
+          "expected": "one-legged knee extension exercise to exhaustion",
+          "predicted": "One-legged knee extension exercise in the fed state, followed by recovery",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "abbreviation/terminology difference"
+          ]
+        },
+        {
+          "field": "biospecimen",
+          "expected": "vastus lateralis muscle microdialysis samples",
+          "predicted": "Microdialysis samples from the vastus lateralis muscle",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "overly specific extraction"
+          ]
+        },
+        {
+          "field": "measurement_method",
+          "expected": "nanoflow high-performance liquid chromatography coupled to Q Exactive H-FX mass spectrometry",
+          "predicted": "Easy nanoflow high-performance liquid chromatography coupled to a Q Exactive H-FX mass spectrometer",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "abbreviation/terminology difference"
+          ]
+        },
+        {
+          "field": "duration_or_timepoints",
+          "expected": "before and during exercise, and 22–30 min and 160–180 min after exercise",
+          "predicted": "180-min recovery period; samples collected before exercise (−30 to −5 min), during exercise (1 to 8 min and 11 to 18 min), and during early (22 to 30 min after exercise) and late (160 to 180 min after exercise) recovery",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "overly specific extraction"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "real_004",
+      "extraction_status": "success",
+      "all_fields_exact": false,
+      "all_fields_normalized": false,
+      "fields": [
+        {
+          "field": "study_design",
+          "expected": "comparison of insulin-resistant and insulin-sensitive groups",
+          "predicted": "Observational comparison of insulin-resistant and insulin-sensitive groups defined by euglycemic clamp",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "overly specific extraction"
+          ]
+        },
+        {
+          "field": "population",
+          "expected": "healthy non-diabetic adults aged 21–70 with BMI 20–35 kg/m2",
+          "predicted": "Healthy non-diabetic adults aged 21–70 years with BMI 20–35 kg/m²; 8 men and 15 women",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "overly specific extraction"
+          ]
+        },
+        {
+          "field": "sample_size",
+          "expected": 23,
+          "predicted": 23,
+          "exact_match": true,
+          "normalized_match": true,
+          "error_categories": []
+        },
+        {
+          "field": "intervention_or_exposure",
+          "expected": "insulin-resistant versus insulin-sensitive status",
+          "predicted": "Insulin resistance versus insulin sensitivity, classified using predefined euglycemic clamp criteria",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "abbreviation/terminology difference"
+          ]
+        },
+        {
+          "field": "biospecimen",
+          "expected": "subcutaneous abdominal adipose tissue biopsy",
+          "predicted": "Adipose tissue biopsy (5–7 g) lateral to the umbilicus",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "abbreviation/terminology difference"
+          ]
+        },
+        {
+          "field": "measurement_method",
+          "expected": "one-dimensional gel electrophoresis followed by HPLC-ESI-MS/MS using a hybrid linear ion trap–Fourier Transform Ion Cyclotron Resonance mass spectrometer",
+          "predicted": "One-dimensional gel electrophoresis followed by HPLC-ESI-MS/MS using a hybrid linear ion trap–Fourier Transform Ion Cyclotron Resonance mass spectrometer",
+          "exact_match": false,
+          "normalized_match": true,
+          "error_categories": [
+            "semantically equivalent but lexically different"
+          ]
+        },
+        {
+          "field": "duration_or_timepoints",
+          "expected": null,
+          "predicted": null,
+          "exact_match": true,
+          "normalized_match": true,
+          "error_categories": []
+        }
+      ]
+    },
+    {
+      "id": "real_005",
+      "extraction_status": "success",
+      "all_fields_exact": false,
+      "all_fields_normalized": false,
+      "fields": [
+        {
+          "field": "study_design",
+          "expected": "20-week graded endurance exercise training program",
+          "predicted": "20-week graded endurance exercise training program",
+          "exact_match": true,
+          "normalized_match": true,
+          "error_categories": []
+        },
+        {
+          "field": "population",
+          "expected": "healthy sedentary individuals aged 17–65 from families of European and African descent",
+          "predicted": "Healthy, sedentary individuals from families of European and African descent; 38% African ancestry; age range 17–65 years; free from cardiometabolic disease",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "abbreviation/terminology difference"
+          ]
+        },
+        {
+          "field": "sample_size",
+          "expected": 654,
+          "predicted": 654,
+          "exact_match": true,
+          "normalized_match": true,
+          "error_categories": []
+        },
+        {
+          "field": "intervention_or_exposure",
+          "expected": "supervised endurance exercise 3 times per week, progressing from 30 to 50 min/session and 55% to 75% VO2max",
+          "predicted": "Supervised endurance exercise 3 times per week for 20 weeks; 30 to 50 minutes per session; intensity increased from heart rate associated with 55% VO2max to that associated with 75% VO2max",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "abbreviation/terminology difference"
+          ]
+        },
+        {
+          "field": "biospecimen",
+          "expected": "plasma",
+          "predicted": "Plasma samples",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "overly specific extraction"
+          ]
+        },
+        {
+          "field": "measurement_method",
+          "expected": "approximately 5000-plex SOMAscan aptamer-based proteomics",
+          "predicted": "Approximately 5000-plex SOMAscan platform using aptamer reagents and a multistep capture, release, and recapture enrichment process to measure plasma proteins",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "abbreviation/terminology difference"
+          ]
+        },
+        {
+          "field": "duration_or_timepoints",
+          "expected": "20 weeks; before training and at least 24 hours after the last session",
+          "predicted": "20 weeks; plasma collected at rest before the program and again at least 24 hours after the last session",
+          "exact_match": false,
+          "normalized_match": false,
+          "error_categories": [
+            "abbreviation/terminology difference"
+          ]
+        }
+      ]
+    }
+  ]
+}

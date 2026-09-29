@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sample_001",
+    "sample_type": "patients with type 2 diabetes",
+    "sample_size": 120,
+    "experimental_method": "continuous glucose monitoring",
+    "intervention": "metformin",
+    "duration": "12 weeks"
+  },
+  {
+    "id": "sample_002",
+    "sample_type": "adults with obesity",
+    "sample_size": 84,
+    "experimental_method": "randomized controlled trial",
+    "intervention": "high-protein diet or standard diet",
+    "duration": "16 weeks"
+  },
+  {
+    "id": "sample_003",
+    "sample_type": "healthy volunteers",
+    "sample_size": 36,
+    "experimental_method": "crossover study",
+    "intervention": "200 mg caffeine or placebo",
+    "duration": null
+  }
+]

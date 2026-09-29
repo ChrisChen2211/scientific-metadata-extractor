@@ -1,0 +1,11 @@
+.venv/
+.env
+__pycache__/
+*.py[cod]
+.DS_Store
+.idea/
+.coverage
+.pytest_cache/
+outputs/predictions.json
+outputs/real_predictions.json
+outputs/*.tmp

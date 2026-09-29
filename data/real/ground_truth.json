@@ -1,0 +1,52 @@
+[
+  {
+    "id": "real_001",
+    "study_design": "randomized crossover study",
+    "population": "healthy adults aged 18–35 with weekly running volume of 2–5 h and BMI < 30",
+    "sample_size": 23,
+    "intervention_or_exposure": "high-intensity interval exercise and moderate-intensity continuous exercise",
+    "biospecimen": "peripheral blood mononuclear cells isolated from EDTA whole blood",
+    "measurement_method": "LC-MS/MS-based untargeted proteomics",
+    "duration_or_timepoints": "baseline, immediately after exercise, and 1 h after exercise; at least 72 h between visits"
+  },
+  {
+    "id": "real_002",
+    "study_design": null,
+    "population": "healthy participants without diabetes",
+    "sample_size": 38,
+    "intervention_or_exposure": "metformin treatment",
+    "biospecimen": "blood",
+    "measurement_method": "Olink panels",
+    "duration_or_timepoints": "baseline and after 4 weeks of metformin treatment"
+  },
+  {
+    "id": "real_003",
+    "study_design": "acute exercise trial",
+    "population": "male participants",
+    "sample_size": 6,
+    "intervention_or_exposure": "one-legged knee extension exercise to exhaustion",
+    "biospecimen": "vastus lateralis muscle microdialysis samples",
+    "measurement_method": "nanoflow high-performance liquid chromatography coupled to Q Exactive H-FX mass spectrometry",
+    "duration_or_timepoints": "before and during exercise, and 22–30 min and 160–180 min after exercise"
+  },
+  {
+    "id": "real_004",
+    "study_design": "comparison of insulin-resistant and insulin-sensitive groups",
+    "population": "healthy non-diabetic adults aged 21–70 with BMI 20–35 kg/m2",
+    "sample_size": 23,
+    "intervention_or_exposure": "insulin-resistant versus insulin-sensitive status",
+    "biospecimen": "subcutaneous abdominal adipose tissue biopsy",
+    "measurement_method": "one-dimensional gel electrophoresis followed by HPLC-ESI-MS/MS using a hybrid linear ion trap–Fourier Transform Ion Cyclotron Resonance mass spectrometer",
+    "duration_or_timepoints": null
+  },
+  {
+    "id": "real_005",
+    "study_design": "20-week graded endurance exercise training program",
+    "population": "healthy sedentary individuals aged 17–65 from families of European and African descent",
+    "sample_size": 654,
+    "intervention_or_exposure": "supervised endurance exercise 3 times per week, progressing from 30 to 50 min/session and 55% to 75% VO2max",
+    "biospecimen": "plasma",
+    "measurement_method": "approximately 5000-plex SOMAscan aptamer-based proteomics",
+    "duration_or_timepoints": "20 weeks; before training and at least 24 hours after the last session"
+  }
+]

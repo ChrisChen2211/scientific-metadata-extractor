@@ -1,0 +1,52 @@
+[
+  {
+    "id": "real_001",
+    "paper_title": "Acute exercise rewires the proteomic landscape of human immune cells",
+    "source_citation": "Walzik D et al. Nature Communications (2026).",
+    "pmcid": "PMC12775541",
+    "doi": "10.1038/s41467-025-68101-9",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12775541/",
+    "section": "Methods — Participant recruitment and informed consent; Study design; Blood collection and sample preparation; LC-MS/MS-based untargeted proteomics",
+    "excerpt": "Study eligibility was assessed for 28 healthy adults aged between 18 and 35. Participants required a weekly running volume of 2–5 h and a body mass index < 30. Of the 28 subjects assessed for eligibility, two were considered ineligible, two further participants dropped out after baseline testing, and for one participant the biomaterial did not suffice to run analyses, which resulted in a total of 23 participants. Participants enrolled in this randomized crossover study were scheduled for three visits: baseline testing, a high-intensity interval exercise (HIIE) session, and a moderate-intensity continuous exercise (MICE) session, with at least 72 h between visits. Blood was drawn at baseline, immediately after exercise, and 1 h after exercise. Each blood draw consisted of whole blood collected in EDTA tubes; peripheral blood mononuclear cells (PBMCs) were isolated by density gradient centrifugation. LC-MS/MS-based untargeted proteomics was performed."
+  },
+  {
+    "id": "real_002",
+    "paper_title": "The influence of metformin treatment on the circulating proteome",
+    "source_citation": "Connolly B et al. eBioMedicine (2025).",
+    "pmcid": "PMC12301841",
+    "doi": "10.1016/j.ebiom.2025.105859",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12301841/",
+    "section": "Methods — IMPOCT",
+    "excerpt": "The IMPOCT study was designed to investigate the impact of the SLC22A1 (OCT1) genotype and OCT1 inhibiting drugs on an individual's ability to tolerate metformin. For this analysis, only data from when individuals were treated with metformin or placebo were utilised, and not data from individuals on OCT1 inhibiting drugs. 38 healthy participants without diabetes were recruited for this study. They were on metformin for 4 weeks, titrated to a maximum dose of 1000 mg BD which they took for the final week of the study. Protein levels in the blood were measured at baseline and after the 4 weeks of metformin treatment using various Olink panels."
+  },
+  {
+    "id": "real_003",
+    "paper_title": "Temporal dynamics of the interstitial fluid proteome in human skeletal muscle following exhaustive exercise",
+    "source_citation": "Stocks B et al. Science Advances (2025).",
+    "pmcid": "PMC11784852",
+    "doi": "10.1126/sciadv.adp8608",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11784852/",
+    "section": "Materials and Methods — Participants; Experimental trials; Mass spectrometry analysis—Interstitial fluid proteome",
+    "excerpt": "Six male participants volunteered to participate in this study. Participants undertook an acute exercise bout of one-legged knee extension in the fed state, followed by a 180-min recovery period. Microdialysis tubules were inserted into the vastus lateralis muscle of the participant's self-reported dominant leg. At time 0, participants began one-legged knee extension exercise; load increased in stages until exhaustion. Microdialysis samples were collected before exercise (−30 to −5 min), during exercise (1 to 8 min and 11 to 18 min), and during the early (22 to 30 min after exercise) and late (160 to 180 min after exercise) recovery period. Microdialysis peptide samples were analyzed using an Easy nanoflow high-performance liquid chromatography system coupled to a Q Exactive H-FX mass spectrometer."
+  },
+  {
+    "id": "real_004",
+    "paper_title": "Proteomics Analyses of Subcutaneous Adipocytes Reveal Novel Abnormalities in Human Insulin Resistance",
+    "source_citation": "Xie X et al. Obesity (Silver Spring) (2016).",
+    "pmcid": "PMC4926648",
+    "doi": "10.1002/oby.21528",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4926648/",
+    "section": "Methods (selected sentences)",
+    "excerpt": "Inclusion criteria were 21–70 years of age and a body mass index (BMI) of 20–35 kg/m2. Twenty-three healthy non-diabetic subjects (8 men, 15 women) completed the study. Subjects underwent an adipose tissue biopsy (5–7 g) lateral to the umbilicus. To avoid selection bias, subjects were divided into an insulin-resistant group (IR) and an insulin-sensitive group (IS) based on predefined criteria of insulin sensitivity by the euglycemic clamp. Adipocyte proteomics analyses were performed by one-dimensional gel electrophoresis followed by HPLC-ESI-MS/MS using a hybrid linear ion trap–Fourier Transform Ion Cyclotron Resonance mass spectrometer."
+  },
+  {
+    "id": "real_005",
+    "paper_title": "Plasma proteomic changes in response to exercise training are associated with cardiorespiratory fitness adaptations",
+    "source_citation": "Robbins JM et al. JCI Insight (2023).",
+    "pmcid": "PMC10132160",
+    "doi": "10.1172/jci.insight.165867",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10132160/",
+    "section": "Methods — HERITAGE Family Study: Participants; Exercise-training protocol; Plasma sampling; Aptamer-based proteomics profiling",
+    "excerpt": "A total of 654 individuals from families of European and African descent (38% African ancestry; age range, 17–65 years) were recruited and completed a 20-week, graded endurance exercise training program. Participants were healthy but sedentary over the previous 3 months and free from cardiometabolic disease. Participants exercised 3 times per week for 20 weeks under full supervision, beginning at 30 min/session and increasing to 50 min/session; exercise intensity increased from the heart rate associated with 55% VO2max to that associated with 75% VO2max. Plasma samples were collected at rest before the program and again at least 24 hours after the last session. The approximately 5000-plex SOMAscan platform used aptamer reagents and a multistep capture, release, and recapture enrichment process to measure plasma proteins."
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "audit_name": "Manual semantic audit of real-paper metadata extraction",
+  "completed_at_utc": "2026-09-29T11:13:23.855443+00:00",
+  "auditor": "Chris Chen",
+  "audit_date": "2026-09-29",
+  "model": "gpt-5.6-luna",
+  "total_fields": 35,
+  "counts": {
+    "Correct": 34,
+    "Partially correct": 1,
+    "Incorrect": 0,
+    "Unsupported": 0
+  },
+  "percentages": {
+    "Correct": 0.9714285714285714,
+    "Partially correct": 0.02857142857142857,
+    "Incorrect": 0.0,
+    "Unsupported": 0.0
+  },
+  "correct_or_partially_correct_count": 35,
+  "correct_or_partially_correct_rate": 1.0,
+  "schema_ambiguity_count": 1,
+  "method": "Human semantic audit by Chris Chen; an AI-prepared comparison worksheet and draft rationales were individually reviewed and approved by the auditor"
+}

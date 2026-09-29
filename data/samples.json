@@ -1,0 +1,14 @@
+[
+  {
+    "id": "sample_001",
+    "text": "We evaluated 120 patients with type 2 diabetes using continuous glucose monitoring. Participants received metformin treatment for 12 weeks. Changes in fasting blood glucose and HbA1c levels were measured throughout the study."
+  },
+  {
+    "id": "sample_002",
+    "text": "A cohort of 84 adults with obesity participated in a randomized controlled trial. Participants received either a high-protein diet or a standard diet for 16 weeks. Body weight and insulin sensitivity were assessed before and after the intervention."
+  },
+  {
+    "id": "sample_003",
+    "text": "Thirty-six healthy volunteers completed a crossover study investigating the effects of caffeine supplementation. Participants consumed either 200 mg of caffeine or placebo before exercise testing. Heart rate and exercise performance were recorded."
+  }
+]

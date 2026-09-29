@@ -1,0 +1,376 @@
+{
+  "audit_name": "Manual semantic audit of real-paper metadata extraction",
+  "audit_status": "complete",
+  "auditor": "Chris Chen",
+  "audit_date": "2026-09-29",
+  "audit_method": "Human semantic audit by Chris Chen; an AI-prepared comparison worksheet and draft rationales were individually reviewed and approved by the auditor",
+  "model": "gpt-5.6-luna",
+  "unit_of_analysis": "one prediction field",
+  "instructions": [
+    "All 35 labels and rationales were individually reviewed and approved by Chris Chen; the comparison worksheet and draft rationales were prepared with AI assistance.",
+    "Judge each prediction only against the stored excerpt, not outside knowledge.",
+    "Choose exactly one semantic label and write a concise evidence-based rationale.",
+    "Set schema_ambiguity to true when the field definition or reference annotation admits more than one reasonable interpretation.",
+    "Do not edit predictions or ground truth to improve scores."
+  ],
+  "rubric": {
+    "Correct": "The prediction preserves all scientifically important information represented by the reference. Abbreviations, paraphrases, and additional excerpt-supported detail are allowed.",
+    "Partially correct": "The core metadata is correct, but the prediction omits or changes some important information.",
+    "Incorrect": "The core scientific meaning is inconsistent with the stored excerpt.",
+    "Unsupported": "The prediction contains information that the stored excerpt cannot support."
+  },
+  "sample_sources": [
+    {
+      "id": "real_001",
+      "paper_title": "Acute exercise rewires the proteomic landscape of human immune cells",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12775541/",
+      "section": "Methods — Participant recruitment and informed consent; Study design; Blood collection and sample preparation; LC-MS/MS-based untargeted proteomics",
+      "excerpt": "Study eligibility was assessed for 28 healthy adults aged between 18 and 35. Participants required a weekly running volume of 2–5 h and a body mass index < 30. Of the 28 subjects assessed for eligibility, two were considered ineligible, two further participants dropped out after baseline testing, and for one participant the biomaterial did not suffice to run analyses, which resulted in a total of 23 participants. Participants enrolled in this randomized crossover study were scheduled for three visits: baseline testing, a high-intensity interval exercise (HIIE) session, and a moderate-intensity continuous exercise (MICE) session, with at least 72 h between visits. Blood was drawn at baseline, immediately after exercise, and 1 h after exercise. Each blood draw consisted of whole blood collected in EDTA tubes; peripheral blood mononuclear cells (PBMCs) were isolated by density gradient centrifugation. LC-MS/MS-based untargeted proteomics was performed."
+    },
+    {
+      "id": "real_002",
+      "paper_title": "The influence of metformin treatment on the circulating proteome",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12301841/",
+      "section": "Methods — IMPOCT",
+      "excerpt": "The IMPOCT study was designed to investigate the impact of the SLC22A1 (OCT1) genotype and OCT1 inhibiting drugs on an individual's ability to tolerate metformin. For this analysis, only data from when individuals were treated with metformin or placebo were utilised, and not data from individuals on OCT1 inhibiting drugs. 38 healthy participants without diabetes were recruited for this study. They were on metformin for 4 weeks, titrated to a maximum dose of 1000 mg BD which they took for the final week of the study. Protein levels in the blood were measured at baseline and after the 4 weeks of metformin treatment using various Olink panels."
+    },
+    {
+      "id": "real_003",
+      "paper_title": "Temporal dynamics of the interstitial fluid proteome in human skeletal muscle following exhaustive exercise",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11784852/",
+      "section": "Materials and Methods — Participants; Experimental trials; Mass spectrometry analysis—Interstitial fluid proteome",
+      "excerpt": "Six male participants volunteered to participate in this study. Participants undertook an acute exercise bout of one-legged knee extension in the fed state, followed by a 180-min recovery period. Microdialysis tubules were inserted into the vastus lateralis muscle of the participant's self-reported dominant leg. At time 0, participants began one-legged knee extension exercise; load increased in stages until exhaustion. Microdialysis samples were collected before exercise (−30 to −5 min), during exercise (1 to 8 min and 11 to 18 min), and during the early (22 to 30 min after exercise) and late (160 to 180 min after exercise) recovery period. Microdialysis peptide samples were analyzed using an Easy nanoflow high-performance liquid chromatography system coupled to a Q Exactive H-FX mass spectrometer."
+    },
+    {
+      "id": "real_004",
+      "paper_title": "Proteomics Analyses of Subcutaneous Adipocytes Reveal Novel Abnormalities in Human Insulin Resistance",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4926648/",
+      "section": "Methods (selected sentences)",
+      "excerpt": "Inclusion criteria were 21–70 years of age and a body mass index (BMI) of 20–35 kg/m2. Twenty-three healthy non-diabetic subjects (8 men, 15 women) completed the study. Subjects underwent an adipose tissue biopsy (5–7 g) lateral to the umbilicus. To avoid selection bias, subjects were divided into an insulin-resistant group (IR) and an insulin-sensitive group (IS) based on predefined criteria of insulin sensitivity by the euglycemic clamp. Adipocyte proteomics analyses were performed by one-dimensional gel electrophoresis followed by HPLC-ESI-MS/MS using a hybrid linear ion trap–Fourier Transform Ion Cyclotron Resonance mass spectrometer."
+    },
+    {
+      "id": "real_005",
+      "paper_title": "Plasma proteomic changes in response to exercise training are associated with cardiorespiratory fitness adaptations",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10132160/",
+      "section": "Methods — HERITAGE Family Study: Participants; Exercise-training protocol; Plasma sampling; Aptamer-based proteomics profiling",
+      "excerpt": "A total of 654 individuals from families of European and African descent (38% African ancestry; age range, 17–65 years) were recruited and completed a 20-week, graded endurance exercise training program. Participants were healthy but sedentary over the previous 3 months and free from cardiometabolic disease. Participants exercised 3 times per week for 20 weeks under full supervision, beginning at 30 min/session and increasing to 50 min/session; exercise intensity increased from the heart rate associated with 55% VO2max to that associated with 75% VO2max. Plasma samples were collected at rest before the program and again at least 24 hours after the last session. The approximately 5000-plex SOMAscan platform used aptamer reagents and a multistep capture, release, and recapture enrichment process to measure plasma proteins."
+    }
+  ],
+  "items": [
+    {
+      "sample_id": "real_001",
+      "field": "study_design",
+      "ground_truth": "randomized crossover study",
+      "prediction": "Randomized crossover study",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction states the same randomized crossover design; capitalization does not change the scientific meaning."
+    },
+    {
+      "sample_id": "real_001",
+      "field": "population",
+      "ground_truth": "healthy adults aged 18–35 with weekly running volume of 2–5 h and BMI < 30",
+      "prediction": "Healthy adults aged 18–35 years with a weekly running volume of 2–5 h and BMI <30",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "Age, health status, weekly running volume, and BMI criterion are all preserved; added function words and 'years' are purely lexical."
+    },
+    {
+      "sample_id": "real_001",
+      "field": "sample_size",
+      "ground_truth": 23,
+      "prediction": 23,
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction gives the explicitly stated final analyzed sample size of 23 rather than the screened count of 28."
+    },
+    {
+      "sample_id": "real_001",
+      "field": "intervention_or_exposure",
+      "ground_truth": "high-intensity interval exercise and moderate-intensity continuous exercise",
+      "prediction": "High-intensity interval exercise (HIIE) and moderate-intensity continuous exercise (MICE) sessions",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "Both exercise conditions are preserved, and the HIIE and MICE abbreviations are explicitly defined in the excerpt."
+    },
+    {
+      "sample_id": "real_001",
+      "field": "biospecimen",
+      "ground_truth": "peripheral blood mononuclear cells isolated from EDTA whole blood",
+      "prediction": "Whole blood collected in EDTA tubes; peripheral blood mononuclear cells (PBMCs)",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction identifies the EDTA whole-blood source and the PBMC biospecimen; both are explicitly stated in the excerpt."
+    },
+    {
+      "sample_id": "real_001",
+      "field": "measurement_method",
+      "ground_truth": "LC-MS/MS-based untargeted proteomics",
+      "prediction": "LC-MS/MS-based untargeted proteomics",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction exactly preserves the stated LC-MS/MS-based untargeted proteomics method."
+    },
+    {
+      "sample_id": "real_001",
+      "field": "duration_or_timepoints",
+      "ground_truth": "baseline, immediately after exercise, and 1 h after exercise; at least 72 h between visits",
+      "prediction": "Three visits (baseline testing, HIIE, MICE) with at least 72 h between visits; blood collected at baseline, immediately after exercise, and 1 h after exercise",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "All reference timepoints and the minimum 72-hour interval are present, with additional supported visit context."
+    },
+    {
+      "sample_id": "real_002",
+      "field": "study_design",
+      "ground_truth": null,
+      "prediction": "IMPOCT study; metformin-versus-placebo analysis in healthy participants",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction remains within the excerpt evidence by identifying the IMPOCT study and its metformin-versus-placebo analysis. Under the broad study_design field used here, this is accepted as a supported description despite the null reference."
+    },
+    {
+      "sample_id": "real_002",
+      "field": "population",
+      "ground_truth": "healthy participants without diabetes",
+      "prediction": "Healthy participants without diabetes",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction preserves the complete population description; capitalization is immaterial."
+    },
+    {
+      "sample_id": "real_002",
+      "field": "sample_size",
+      "ground_truth": 38,
+      "prediction": 38,
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction matches the explicitly stated sample size of 38."
+    },
+    {
+      "sample_id": "real_002",
+      "field": "intervention_or_exposure",
+      "ground_truth": "metformin treatment",
+      "prediction": "Metformin or placebo; metformin was titrated to a maximum dose of 1000 mg twice daily, taken during the final week",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "Metformin, placebo, dose titration, and the final-week dose are all explicitly supported; the extra detail does not alter the reference intervention."
+    },
+    {
+      "sample_id": "real_002",
+      "field": "biospecimen",
+      "ground_truth": "blood",
+      "prediction": "Blood",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction and reference identify the same blood biospecimen."
+    },
+    {
+      "sample_id": "real_002",
+      "field": "measurement_method",
+      "ground_truth": "Olink panels",
+      "prediction": "Protein levels measured using various Olink panels",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction preserves Olink panels as the measurement method and adds only the supported measurement context."
+    },
+    {
+      "sample_id": "real_002",
+      "field": "duration_or_timepoints",
+      "ground_truth": "baseline and after 4 weeks of metformin treatment",
+      "prediction": "Metformin treatment for 4 weeks; blood measurements at baseline and after 4 weeks",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The four-week treatment duration and baseline/four-week measurement timepoints are all preserved."
+    },
+    {
+      "sample_id": "real_003",
+      "field": "study_design",
+      "ground_truth": "acute exercise trial",
+      "prediction": "Acute exercise study with repeated microdialysis sampling",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "An acute exercise study with repeated microdialysis sampling accurately captures the trial structure explicitly described by the excerpt."
+    },
+    {
+      "sample_id": "real_003",
+      "field": "population",
+      "ground_truth": "male participants",
+      "prediction": "Six male participants",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The population remains male participants; adding the explicitly stated count of six is supported."
+    },
+    {
+      "sample_id": "real_003",
+      "field": "sample_size",
+      "ground_truth": 6,
+      "prediction": 6,
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction matches the explicitly stated sample size of six."
+    },
+    {
+      "sample_id": "real_003",
+      "field": "intervention_or_exposure",
+      "ground_truth": "one-legged knee extension exercise to exhaustion",
+      "prediction": "One-legged knee extension exercise in the fed state, followed by recovery",
+      "label": "Partially correct",
+      "schema_ambiguity": false,
+      "rationale": "The core one-legged knee-extension intervention is correct and the fed state and recovery are supported, but the prediction omits the scientifically relevant 'until exhaustion' endpoint in the reference."
+    },
+    {
+      "sample_id": "real_003",
+      "field": "biospecimen",
+      "ground_truth": "vastus lateralis muscle microdialysis samples",
+      "prediction": "Microdialysis samples from the vastus lateralis muscle",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction identifies the same vastus lateralis microdialysis samples; only word order differs."
+    },
+    {
+      "sample_id": "real_003",
+      "field": "measurement_method",
+      "ground_truth": "nanoflow high-performance liquid chromatography coupled to Q Exactive H-FX mass spectrometry",
+      "prediction": "Easy nanoflow high-performance liquid chromatography coupled to a Q Exactive H-FX mass spectrometer",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The chromatography and Q Exactive H-FX mass-spectrometry method are preserved; 'Easy' is explicitly present in the excerpt."
+    },
+    {
+      "sample_id": "real_003",
+      "field": "duration_or_timepoints",
+      "ground_truth": "before and during exercise, and 22–30 min and 160–180 min after exercise",
+      "prediction": "180-min recovery period; samples collected before exercise (−30 to −5 min), during exercise (1 to 8 min and 11 to 18 min), and during early (22 to 30 min after exercise) and late (160 to 180 min after exercise) recovery",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction contains every reference sampling phase and both recovery windows, plus the supported 180-minute recovery duration and exact intervals."
+    },
+    {
+      "sample_id": "real_004",
+      "field": "study_design",
+      "ground_truth": "comparison of insulin-resistant and insulin-sensitive groups",
+      "prediction": "Observational comparison of insulin-resistant and insulin-sensitive groups defined by euglycemic clamp",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction preserves the insulin-resistant versus insulin-sensitive group comparison and clamp-based classification. 'Observational comparison' is accepted as a reasonable concise characterization of grouping participants by measured insulin sensitivity rather than assigning an intervention."
+    },
+    {
+      "sample_id": "real_004",
+      "field": "population",
+      "ground_truth": "healthy non-diabetic adults aged 21–70 with BMI 20–35 kg/m2",
+      "prediction": "Healthy non-diabetic adults aged 21–70 years with BMI 20–35 kg/m²; 8 men and 15 women",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "All reference eligibility characteristics are preserved, and the added sex counts are explicitly supported."
+    },
+    {
+      "sample_id": "real_004",
+      "field": "sample_size",
+      "ground_truth": 23,
+      "prediction": 23,
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction matches the explicitly stated completed sample size of 23."
+    },
+    {
+      "sample_id": "real_004",
+      "field": "intervention_or_exposure",
+      "ground_truth": "insulin-resistant versus insulin-sensitive status",
+      "prediction": "Insulin resistance versus insulin sensitivity, classified using predefined euglycemic clamp criteria",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction preserves the IR-versus-IS exposure and adds the explicitly stated euglycemic-clamp classification criterion."
+    },
+    {
+      "sample_id": "real_004",
+      "field": "biospecimen",
+      "ground_truth": "subcutaneous abdominal adipose tissue biopsy",
+      "prediction": "Adipose tissue biopsy (5–7 g) lateral to the umbilicus",
+      "label": "Correct",
+      "schema_ambiguity": true,
+      "rationale": "The prediction accurately reports the excerpt's adipose tissue biopsy, mass, and location. The reference adds 'subcutaneous abdominal,' which is not directly stated in the model's stored excerpt, so the reference annotation itself is broader than the excerpt evidence."
+    },
+    {
+      "sample_id": "real_004",
+      "field": "measurement_method",
+      "ground_truth": "one-dimensional gel electrophoresis followed by HPLC-ESI-MS/MS using a hybrid linear ion trap–Fourier Transform Ion Cyclotron Resonance mass spectrometer",
+      "prediction": "One-dimensional gel electrophoresis followed by HPLC-ESI-MS/MS using a hybrid linear ion trap–Fourier Transform Ion Cyclotron Resonance mass spectrometer",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The full one-dimensional gel electrophoresis and HPLC-ESI-MS/MS FTICR method is preserved; capitalization is the only difference."
+    },
+    {
+      "sample_id": "real_004",
+      "field": "duration_or_timepoints",
+      "ground_truth": null,
+      "prediction": null,
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "Neither the excerpt nor the reference provides a study duration or sampling timepoint, and the prediction correctly abstains."
+    },
+    {
+      "sample_id": "real_005",
+      "field": "study_design",
+      "ground_truth": "20-week graded endurance exercise training program",
+      "prediction": "20-week graded endurance exercise training program",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction exactly preserves the 20-week graded endurance training design."
+    },
+    {
+      "sample_id": "real_005",
+      "field": "population",
+      "ground_truth": "healthy sedentary individuals aged 17–65 from families of European and African descent",
+      "prediction": "Healthy, sedentary individuals from families of European and African descent; 38% African ancestry; age range 17–65 years; free from cardiometabolic disease",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "All reference population characteristics are preserved; African-ancestry proportion and absence of cardiometabolic disease are additional excerpt-supported details."
+    },
+    {
+      "sample_id": "real_005",
+      "field": "sample_size",
+      "ground_truth": 654,
+      "prediction": 654,
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction matches the explicitly stated sample size of 654."
+    },
+    {
+      "sample_id": "real_005",
+      "field": "intervention_or_exposure",
+      "ground_truth": "supervised endurance exercise 3 times per week, progressing from 30 to 50 min/session and 55% to 75% VO2max",
+      "prediction": "Supervised endurance exercise 3 times per week for 20 weeks; 30 to 50 minutes per session; intensity increased from heart rate associated with 55% VO2max to that associated with 75% VO2max",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "Frequency, supervision, duration, session progression, and intensity progression are all preserved; wording changes do not alter the protocol."
+    },
+    {
+      "sample_id": "real_005",
+      "field": "biospecimen",
+      "ground_truth": "plasma",
+      "prediction": "Plasma samples",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "'Plasma samples' and 'plasma' identify the same explicitly stated biospecimen."
+    },
+    {
+      "sample_id": "real_005",
+      "field": "measurement_method",
+      "ground_truth": "approximately 5000-plex SOMAscan aptamer-based proteomics",
+      "prediction": "Approximately 5000-plex SOMAscan platform using aptamer reagents and a multistep capture, release, and recapture enrichment process to measure plasma proteins",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The prediction preserves the approximately 5000-plex SOMAscan aptamer method and adds only the explicitly described assay process."
+    },
+    {
+      "sample_id": "real_005",
+      "field": "duration_or_timepoints",
+      "ground_truth": "20 weeks; before training and at least 24 hours after the last session",
+      "prediction": "20 weeks; plasma collected at rest before the program and again at least 24 hours after the last session",
+      "label": "Correct",
+      "schema_ambiguity": false,
+      "rationale": "The 20-week duration, pre-program collection, and collection at least 24 hours after the last session are all preserved."
+    }
+  ]
+}
